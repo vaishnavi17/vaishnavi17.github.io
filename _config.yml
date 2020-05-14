@@ -24,7 +24,7 @@ github_username:  vaishnavi17
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: hydra
 plugins:
   - jekyll-feed
 
