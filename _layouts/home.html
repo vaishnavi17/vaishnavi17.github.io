@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+
+  {%- if page.intro -%}
+    <h1 class="page-heading" style="font-size: 82px; font-weight: 700; padding-top: 20px">{{ page.intro }}</h1>
+    <p style="font-size: 16pt">I'm a freshman studying CS @ Cornell </a> <br> This website is currently very very empty.</p>
   {%- endif -%}
-
   {{ content }}
-
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
@@ -57,4 +56,3 @@ layout: default
 
   {%- endif -%}
 
-</div>
