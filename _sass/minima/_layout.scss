@@ -2,8 +2,7 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
+  border-bottom: 1px solid black;
   min-height: $spacing-unit * 1.6;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -201,7 +200,7 @@
  */
 .page-content {
   padding: $spacing-unit 0;
-  min-height: 75vh;
+  min-height: 85vh;
   flex: 1 0 auto;
 }
 
@@ -346,6 +345,8 @@
   background-size: cover;
   margin: 0 1vw;
 }
+
+
 
 .icon:hover{
   animation: enlarge 0.5s forwards;

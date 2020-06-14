@@ -1,2 +1,11 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+.fa.intro{
+  color: rgb(82, 82, 82);
+  
+  &:hover {
+    transform: scale(1.1);
+    transition: all .1s ease-in-out;
+    color: hsl(219, 70%, 76%);
+  }
+}

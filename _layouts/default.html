@@ -4,32 +4,25 @@
 {%- include head.html -%}
 
 <body>
+  <script src="https://use.fontawesome.com/05e5864e00.js"></script>
 
   {%- include header.html -%}
 
-  <main class="page-content" aria-label="Content" style="background-color: #c5e7e1; display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-gap: 30px; align-items: center;">
-  <div class="wrapper home" style="grid-column: span 2;">
-    {{ content }}
-  </div>
-  <div class = "wrapper">
-    {%- assign social = site.social_links -%}
-    <ul class="social-media-list">
+  <section class="hero is-large">
+    <div class="columns is-desktop is-vcentered" style="display: flexbox; min-height: 92vh;">
+      {{ content }}
+    </div>
 
-      <li> <div class="icon git"> </div></li>
+  </section>
 
-      {%- if social.spotify -%}<li><a rel="me" href="https://dribbble.com/{{ social.spotify | cgi_escape | escape }}" title="{{ social.spotify | escape }}"><svg viewBox="0 0 10 10" class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#spotify' | relative_url }}"></use></svg></a></li>{%- endif -%}
-      
-      {%- if social.github -%}<li><a rel="me" href="https://www.facebook.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>{%- endif -%}
-    </ul>
-  </div>
-</main>
+  {%- include footer.html -%}
+  <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
 
-{%- include footer.html -%}
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>

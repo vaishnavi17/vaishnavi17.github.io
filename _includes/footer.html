@@ -1,33 +1,34 @@
-<footer class="site-footer h-card">
+<footer class="site-footer h-card" style="background-color: rgb(238, 243, 252);">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        
-      {%- if site.author %}
+
+        {%- if site.author %}
         <ul class="contact-list">
           <!-- {% if site.author.name -%}
             <li class="p-name">{{ site.author.name | escape }}</li>
           {% endif -%} -->
           {% if site.author.email -%}
-            <li>You can contact me at <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          <li>You can contact me at <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          </li>
 
-            <li>Here's a copy of my <a href="/resume.pdf">resume</a></li>
-            <br>
+          <li>Here's a copy of my <a href="/resume.pdf">resume</a></li>
+          <br>
           {%- endif %}
         </ul>
-      {%- endif %}
+        {%- endif %}
       </div>
       <div class="footer-col footer-col-2">
-      {%- include social.html -%}
+        {%- include social.html -%}
       </div>
       <div class="footer-col footer-col-3">
         <p>{{ site.description | escape }}</p>
         <p style="font-size:9pt; margin-bottom: 0;">Site last updated on {{ site.time | date_to_long_string}}</p>
       </div>
-      
+
     </div>
 
 
