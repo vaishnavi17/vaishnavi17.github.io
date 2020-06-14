@@ -1,14 +1,17 @@
 ---
 layout: default
 ---
-<article class="post">
+<div class="column is-8-tablet is-vcentered is-centered has-text-left-desktop is-offset-2"
+  style="padding-left: 5%; padding-right: 5%;">
+  <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-</article>
+  </article>
+</div>
