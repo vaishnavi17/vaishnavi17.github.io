@@ -122,7 +122,7 @@
  */
 .site-footer {
   border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
+  padding: $spacing-unit 0 $spacing-unit/2 0;
 }
 
 .footer-heading {
@@ -345,7 +345,6 @@
   background-size: cover;
   margin: 0 1vw;
 }
-
 
 
 .icon:hover{
