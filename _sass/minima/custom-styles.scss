@@ -1,5 +1,10 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+html,
+  body{
+    overflow-x:hidden;
+  }
+
 .fa.intro{
   color: rgb(82, 82, 82);
   transition: all .1s ease-in-out;
@@ -8,3 +13,63 @@
     color: hsl(219, 70%, 76%);
   }
 }
+
+.card {
+  height: 100%;
+}
+.media-content .title {
+  line-height: unset;
+ }
+
+.button:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+a.button:hover {
+  text-decoration: none;
+}
+
+.ocaml {
+  background-color: hsl(188, 50%, 70%);
+}
+
+.react {
+  background-color: hsl(251, 67%, 80%);
+}
+
+.java {
+  background-color: hsl(120, 68%, 69%);
+}
+
+.cpp {
+  background-color: hsl(358, 100%, 86%);
+}
+.language {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.offset {
+  border: 2px solid  hsl(219, 70%, 86%);
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0 0 0 0;
+  // transition-delay: 70ms;
+  &:hover {
+    box-shadow: .4em .3em 0 0 hsl(219, 70%, 86%);
+    // transform: translate(-.4em, -.3em);
+    
+    // transition-delay: 0s;
+  }
+}
+
+// * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }
