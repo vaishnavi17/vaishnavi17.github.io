@@ -58,12 +58,12 @@ a.button:hover {
 .offset {
   border: 2px solid  hsl(219, 70%, 86%);
   transition: all 0.1s ease-in-out;
-  box-shadow: 0 0 0 0;
+  
   // transition-delay: 70ms;
+  box-shadow: .4em .3em 0 0 hsl(219, 70%, 86%);
   &:hover {
-    box-shadow: .4em .3em 0 0 hsl(219, 70%, 86%);
+    // box-shadow: 0 0 0 0;
     // transform: translate(-.4em, -.3em);
-    
     // transition-delay: 0s;
   }
 }
