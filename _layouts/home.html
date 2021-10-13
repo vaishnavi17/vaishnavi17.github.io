@@ -2,10 +2,10 @@
 layout: default
 ---
 <section class="hero is-large">
-  <div class="columns is-desktop is-vcentered is-multiline is-centered" style=" min-height: 93vh;">
+  <div class="columns is-desktop is-vcentered is-multiline is-centered mx-1" style="min-height: 93vh;">
     <div class="column is-1-desktop"></div>
     <div
-      class="column is-6-desktop is-narrow is-vcentered is-centered has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
+      class="column is-6-desktop is-narrow is-vcentered is-centered is-centered-mobile has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
       {%- if page.intro -%}
       <h1 class="page-heading" style="font-size: 82px; font-weight: 700; padding-top: 20px">{{ page.intro }}</h1>
       <p style="font-size: 16pt">I'm a junior studying CS + Math @ Cornell. <br>
@@ -14,6 +14,7 @@ layout: default
       {%- endif -%}
       {{ content }}
     </div>
+    <!-- <div class="column is-0-desktop is-1-mobile is-1-tablet"></div> -->
     <div
       class="column is-4-desktop is-narrow is-vcentered is-centered has-text-centered-desktop has-text-centered-mobile has-text-centered-tablet">
       <span class="icon">
@@ -40,11 +41,11 @@ layout: default
   </div>
 </section>
 
-<section class="hero is-large" style="min-height: 100vh">
+<section class="hero is-large">
   <div class="columns is-desktop is-multiline is-centered"
     style="padding-top: 1em;height: 100%; padding-left: 5%; padding-right: 5%">
     <div class="column is-vcentered is-8-desktop is-centered has-text-centered is-full">
-      <div style="font-size: 26pt; font-weight: bold;"> what i do</div>
+      <div style="font-size: max(26pt, 2.2vw); font-weight: bold;"> what i do</div>
       I'm a backend developer at
       <!-- <span class="icon abt">
         <i class="fa fa-spotify"></i></span> -->
@@ -53,17 +54,207 @@ layout: default
       <a href="https://www.cornelldti.org/">
         Cornell
         Design & Tech Initiative</a>, working on
-      <a href="https://courseplan.io">CoursePlan</a>. This summer, I interned at Instagram, working on infra + ML.
-      Previously, I've worked as an undergraduate researcher at <a href="https://www.maizegenetics.net/">Buckler
-        Lab</a>, working to write fast (and
-      statically typed!) genetic analysis tools in Kotlin. I'm also a teaching assistant for <a
-        href="https://www.cs.cornell.edu/courses/cs4820/2021sp/">Algorithms</a> and <a
-        href="http://www.cs.cornell.edu/courses/cs2802/2020fa/">Honors
-        Discrete Math</a> at Cornell.
-      Besides that, here's some stuff I've made.
+      <a href="https://courseplan.io">CoursePlan</a>. This summer, I interned at Instagram, working on backend infra + ML for suggested user recommendations.
+     As an undergraduate researcher at <a href="https://cuai.github.io/">CUAI</a>, I enjoy working on interesting graph ML problems! 
+
+     <!-- Previously, I've worked as an undergraduate researcher at <a href="https://www.maizegenetics.net/">Buckler
+      Lab</a>, working to write fast (and
+    statically typed!) genetic analysis tools in Kotlin. -->
+
+    I'm also a teaching assistant for <a
+        href="https://www.cs.cornell.edu/courses/cs4820/2021sp/">Algorithms</a> at Cornell.
     </div>
   </div>
-  <div class="columns is-mobile is-multiline is-centered" style="padding-bottom: 3em; height: 100%">
+
+  <div class="columns is-mobile is-multiline is-vcenteredis-centered is-centered-mobile has-text-centered-mobile tabs is-4-desktop"
+    >
+    <div class="column is-3-desktop is-2-tablet is-0-mobile is-vcentered is-centered is-centered-mobile "   style="padding: 0;">
+    </div>
+    <div class="column is-3-mobile is-vcentered is-centered has-text-centered is-centered-mobile has-text-centered-mobile" style="max-width: 20em;">
+      <div class = "toggle" data-id="projects"> projects</div>
+    </div>
+
+    <div class="column is-5-mobile is-vcentered is-centered has-text-centered is-centered-mobile has-text-centered-mobile" style="max-width: 20em;">
+      <div class = "active toggle" data-id="experience"> work experience</div>
+    </div>
+    
+    <div class="column is-3-mobile is-vcentered is-centered has-text-centered is-centered-mobile has-text-centered-mobile" style="max-width: 20em;">
+      <div class = "toggle" data-id="research"> research</div>
+    </div>
+    <div class="column is-3-desktop is-2-tablet is-0-mobile is-vcentered is-centered is-centered-mobile " style="padding: 0;">
+    </div>
+  </div>
+  </section>
+  <section class="hero is-large" style="min-height: 60vh; margin-top: 2em;">
+
+  <div class="toggle-content active columns is-mobile is-multiline is-centered" style="padding-bottom: 3em; height: 100%" id="experience">
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Facebook</span>
+              <span class="tag is-spaced is-6 is-vcentered is-medium is-link is-light">
+                  Software Engineering Intern
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I worked on infra in the Instagram Suggested Users team, to increase CPU efficiency and recommendation quality.
+            </p>
+            <p> My project involved optimizing the times at which the cache is refreshed by predicting a user's peak activity times, and scheduling the refresh accordingly. 
+              
+           Led to a 30% reduction in CPU usage during the busiest hours, and an 8% decrease overall.</p>
+            <p>Used C++ and Python, as well as SQL and A/B testing frameworks for statistical analysis.</p>
+          </div>
+          <div style="flex: 0 1 1em">
+            
+            <span class="language cpp" style="margin-left: 0;"></span> C++
+           <span class="language python"></span> Python
+              <span class="language sql" ></span> SQL
+            <span style="font-size: 11pt; font-weight: light; float:right">June 2021 - August 2021</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-centered has-text-left-desktop" >
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Cornell DTI</span>
+              <span class="tag is-spaced is-6 is-vcentered is-medium is-link is-light">
+                  Backend Developer
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I work on <link rel = "icon" type="image/ico" href="courseplan.io/favicon.ico"> <a class = "is-light is-link" href = "courseplan.io">CoursePlan</a>, a website that helps Cornell students plan out their course requirements for graduation. 
+              This involves implementing infrastructure to check for different requirement fulfillment conditions through a bipartite matching 
+              algorithm. So far, we have over 3000 users!</p>
+            <p>
+              Previously a dev on <a href="https://www.cornelldti.org/projects/flux/">flux</a>, an app to assess real-time traffic flow at Cornell campus locations. Implemented a model to predict queue wait-times using swipe data, which improves through weighted crowdsourced feedback.
+            </p>
+
+          </div>
+          <div style="flex: 0 1 1em"><span class="language typescript" style="margin-left: 0;"></span> TypeScript
+            <span class="language sql"></span> Firebase
+            <span style="font-size: 11pt; font-weight: light; float:right">August 2020 - present</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop is-flex">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Cornell</span>
+              <span class="tag is-spaced is-6 is-vcentered is-medium is-link is-light">
+                  Head Teaching Assistant
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>As a head TA for CS 4820 (Algorithms), I am responsible for holding recitations, setting up the autograder, writing course materials, and holding office hours.</p>
+            <p>
+              Previously, I have also been a TA for CS 2802 - Honors Discrete Math (Fall '20<b>*</b>) and CS 4820 (Spring '21<b>*</b>).
+            </p>
+            <p><b>*</b> Received the CIS department's course staff award </p>
+
+          </div>
+          <div style="flex: 0 1 1em"><span class="language java" style="margin-left: 0;"></span> grading very long proofs
+            <span class="language cpp"></span> fun slide animations 
+            <span style="font-size: 11pt; font-weight: light; float:right">August 2020 - present</span></div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <div class="toggle-content columns is-mobile is-multiline is-centered" style="padding-bottom: 3em; " id="research">
+    <div class="column is-full is-centered has-text-centered mx-6" style="align-items: center;">
+      <div style="padding-left: 5vw; padding-right: 5vw; max-width: 70rem; margin: auto" class="is-centered is-flex">Currently, I'm interested in graph ML methods and applications of algorithm design to machine learning. 
+        I'm also exploring CS theory research, advised by Professor Robert Kleinberg.</div>
+      
+    </div>
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >CU Artifical Intelligence</span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>Working on deep learning graph ML methods that perform well on non-homophilous graphs. Many modern state-of-the-art methods rely on 
+              homophilous structures, meaning that they work best on graphs where you and your neighbour are likely to have the same label.
+            </p>
+
+            <div class="is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered" ><b>[1] Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods</b></span>
+              <span class="icon">
+                <a href="https://arxiv.org/abs/2104.01404"><i class="fa intro fa-file-pdf-o fa-expand"
+                    aria-label="PDF"></i></a>
+              </span>
+              <span class="tag is-spaced is-6 is-vcentered is-dynamic-medium is-link is-light" >
+                  <i>NeurIPS 2021</i>
+              </span>
+            </div>
+          </div>
+
+          <div style="flex: 0 1 1em; margin-top: 20px;">
+            <span style="font-size: 11pt; font-weight: light; float:right">June 2021 - present</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Buckler Lab</span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I worked on BioKotlin, a statically typed library in Kotlin and C providing fast and optimized genetic
+              analysis tools. Particularly, I worked on setting up the algorithms and infrastructure for computing sequence alignments and efficiently storing DNA sequences and alignments.</p> <p>
+              I also worked on using machine learning to predict maize haplotypes by optimally stitching together fragmented DNA alignments.</p>
+
+          </div>
+          <div style="flex: 0 1 1em">
+            <span style="font-size: 11pt; font-weight: light; float:right">June 2020 - September 2020</span></div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+  <div class="toggle-content columns is-mobile is-multiline is-centered" style="padding-bottom: 3em; height: 100%" id="projects">
     <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
       <div class="card offset">
         <div class="card-content" style="height: 100%; display: flex;
@@ -91,13 +282,45 @@ layout: default
             </p>
 
           </div>
-          <div style="flex: 0 1 1em"><span class="language ocaml" style="margin-left: 0;"></span> OCaml
+          <div style="flex: 0 1 1em">
+            <span class="language ocaml" style="margin-left: 0;"></span> OCaml
             <span class="language react"></span> React.js
             <span style="font-size: 11pt; font-weight: light; float:right">March 2020 - August 2020</span></div>
         </div>
       </div>
 
     </div>
+
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered">
+              <span class="title is-3 is-vcentered">Xi Compiler</span>
+              <span class="is-vcentered" style="float: right">
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>As a team of 3, we wrote a compiler for the Xi language (based off C), involving lexing, parsing, type-checking, semantic analysis, and assembly code generation. </p><p>We also implemented optimizations
+              like dynamic register allocation, common subexpression elimination, dead-code elimination, copy propogation, and constant propogation.
+            </p>
+            <p>
+              Deemed best compiler for <a href = "https://www.cs.cornell.edu/courses/cs4120/2021sp/pa/pa6/bakeoff/">CS 4120</a>, based off of benchmarks testing both correctness 
+              and efficiency of the generated code. Most importantly, we got a cool plaque :-)
+            </p>
+
+          </div>
+          <div style="flex: 0 1 1em"><span class="language java" style="margin-left: 0;"></span> Kotlin
+            <span style="font-size: 11pt; font-weight: light; float:right">Feb 2021 - June 2021</span></div>
+        </div>
+      </div>
+
+    </div>
+
+
 
     <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
       <div class="card offset">
@@ -146,12 +369,12 @@ layout: default
             <p>A responsive online learning platform consisting of modules regarding optimal neonatal care practices
               for
               preventing <a href="https://en.wikipedia.org/wiki/Retinopathy_of_prematurity">retinopathy of
-                prematurity</a>. The modules consist of webinars, infographics and timed multiple choice tests users can
-              take to get certified.</p>
+                prematurity</a>.  </p><p>The modules consist of webinars, infographics and timed multiple choice tests users can
+              take to get certified. So far, they been used by over 10,000 medical professionals across India.</p>
             <p>
-              So far, the modules have been used by over 10,000 medical professionals from across India and the
-              Maldives.
-              The platform is used as a crucial learning aid in training sessions at medical colleges.
+              
+              The platform is used as a learning aid in training sessions at medical schools, and was part of a study assessing 
+              the effectiveness of hybrid online teaching methods.
             </p>
 
           </div>
@@ -171,7 +394,6 @@ layout: default
             <div class="media-content is-vcentered">
               <span class="title is-3 is-vcentered">Critterworld</span>
               <span class="is-vcentered" style="float: right">
-                <!-- <a class="button is-link is-light is-rounded" href="https://github.com/FelixHohne/phylo-lib">Github</a> -->
               </span>
             </div>
           </div>
@@ -205,7 +427,48 @@ layout: default
 </section>
 
 
+<script>
+  // const tabs = document.querySelector(".wrapper");
+  // function switchcontent(category) {
+  //   alert('click');
+  //   const tabButton = document.querySelectorAll(".toggle");
+  //   const contents = document.querySelectorAll(".toggle-content");
+  //   tabButton.forEach(btn => {
+  //       btn.classList.remove("active");
+  //     });
+  //   e.target.classList.add("active");
 
+  //   contents.forEach(content => {
+  //     content.classList.remove("active");
+  //   });
+  //   const element = document.getElementById(id);
+  //   element.classList.add("active");
+  // }
+  
+
+  const tabButton = document.querySelectorAll(".toggle");
+  // alert(tabButton);
+  const contents = document.querySelectorAll(".toggle-content");
+  for (const tab of tabButton) {
+    tab.onclick = e => {
+    
+    const id = e.target.dataset.id;
+    // alert(id);
+    if (id) {
+      tabButton.forEach(btn => {
+        btn.classList.remove("active");
+      });
+      e.target.classList.add("active");
+
+      contents.forEach(content => {
+        content.classList.remove("active");
+      });
+      const element = document.getElementById(id);
+      element.classList.add("active");
+    }
+  }
+  }
+</script>
 
 
 {% if site.paginate %}

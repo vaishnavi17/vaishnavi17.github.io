@@ -1,5 +1,7 @@
+
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
 html,
   body{
     overflow-x:hidden;
@@ -12,6 +14,15 @@ html,
     transform: scale(1.2);
     color: hsl(219, 70%, 76%);
   }
+}
+.exp-title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    }
+.tag {
+  color: black !important;
 }
 
 .card {
@@ -31,11 +42,15 @@ a.button:hover {
 }
 
 .ocaml {
-  background-color: hsl(188, 50%, 70%);
+  background-color: hsl(216, 67%, 76%);
 }
 
 .react {
   background-color: hsl(251, 67%, 80%);
+}
+
+.typescript{
+  background-color: hsl(216, 67%, 76%);
 }
 
 .java {
@@ -46,8 +61,12 @@ a.button:hover {
   background-color: hsl(358, 100%, 86%);
 }
 
+.python {
+  background-color: hsl(251, 67%, 80%);
+}
+
 .php {
-  background-color: hsl(216, 67%, 76%);
+  background-color: hsl(188, 50%, 70%);
 }
 
 .sql {
@@ -74,6 +93,47 @@ a.button:hover {
     // transform: translate(-.4em, -.3em);
     // transition-delay: 0s;
   }
+}
+
+.toggle {
+  font-size: min(24px,  4.5vw); 
+  font-weight: bold; 
+  max-width: 20em;
+  color: rgb(0, 0, 0);
+  &:hover {
+    border: 2px solid  hsl(219, 70%, 86%);
+    transition: all 0.02s ease-in;
+    // color: black;
+    // transition-delay: 70ms;
+    box-shadow: .1em .1em 0 0 hsl(219, 70%, 86%);
+    cursor: default;
+  }
+}
+
+.is-dynamic-medium {
+  font-size: min(1rem, 2vw) !important;
+}
+
+.active.toggle {
+  background-color: hsl(219, 70%, 98%);
+  border: 2px solid  hsl(219, 70%, 86%);
+  // transition: all 0.1s ease-in-out;
+  color: black;
+  // transition-delay: 70ms;
+  box-shadow: .1em .1em 0 0 hsl(219, 70%, 86%);
+  // &:hover {
+    // box-shadow: 0 0 0 0;
+    // transform: translate(-.4em, -.3em);
+    // transition-delay: 0s;
+  // }
+}
+
+.toggle-content {
+  display: none !important;
+}
+
+.toggle-content.active {
+  display:flex !important;
 }
 
 // * {
