@@ -106,10 +106,26 @@ a.button:hover {
     // color: black;
     // transition-delay: 70ms;
     box-shadow: .1em .1em 0 0 hsl(219, 70%, 86%);
-    cursor: default;
+    cursor: pointer;
   }
 }
-
+.scroll {
+  font-size: min(24px,  4.5vw); 
+  font-weight: bold; 
+  max-width: 20em;
+  color: rgb(0, 0, 0);
+  border: 2px solid  hsl(219, 70%, 86%);
+  -moz-border-radius:70px;
+  -webkit-border-radius: 70px;
+  box-shadow: .1em .1em 0 0 hsl(219, 70%, 86%);
+  &:hover {
+    transition: all 0.02s ease-in;
+    background-color: hsl(219, 70%, 98%);
+    cursor: default;
+    // color: black;
+    // transition-delay: 70ms;
+  }
+}
 .is-dynamic-medium {
   font-size: min(1rem, 2vw) !important;
 }

@@ -8,7 +8,8 @@ layout: default
       class="column is-6-desktop is-narrow is-vcentered is-centered is-centered-mobile has-text-centered-mobile has-text-centered-tablet has-text-left-desktop">
       {%- if page.intro -%}
       <h1 class="page-heading" style="font-size: 82px; font-weight: 700; padding-top: 20px">{{ page.intro }}</h1>
-      <p style="font-size: 16pt">I'm a junior studying CS + Math @ Cornell. <br>
+      <p style="font-size: 16pt">I'm an MS student @ Cornell, interested in machine learning. <br>As an undergrad, I majored in Computer Science + Math (also @ Cornell). <br>
+
         This website is a dumping ground for my projects and various other links.
       </p>
       {%- endif -%}
@@ -38,6 +39,12 @@ layout: default
       </span>
     </div>
     <div class="column is-1-desktop "></div>
+    <!-- <div class="column is-1-desktop is-centered has-text-centered is-centered-mobile has-text-centered-mobile" style="max-width: 20em;">
+      <div class = "scroll" data-id="research"> 
+        <span class="icon">
+        <i class="fa fa-arrow-down"></i>
+      </span></div>
+    </div> -->
   </div>
 </section>
 
@@ -46,16 +53,18 @@ layout: default
     style="padding-top: 1em;height: 100%; padding-left: 5%; padding-right: 5%">
     <div class="column is-vcentered is-8-desktop is-centered has-text-centered is-full">
       <div style="font-size: max(26pt, 2.2vw); font-weight: bold;"> what i do</div>
-      I'm a backend developer at
+
+      This summer, I'm interning at Meta AI, working on making vision transformers for videos more compute efficient.
+      At Cornell, I'm a backend developer at
       <!-- <span class="icon abt">
         <i class="fa fa-spotify"></i></span> -->
 
       {%- include dti.html -%}
       <a href="https://www.cornelldti.org/">
-        Cornell
         Design & Tech Initiative</a>, working on
-      <a href="https://courseplan.io">CoursePlan</a>. This summer, I interned at Instagram, working on backend infra + ML for suggested user recommendations.
+      <a href="https://courseplan.io">CoursePlan</a>. Before that, I interned at Instagram, working on backend infra + ML for suggested user recommendations.<br>
      As an undergraduate researcher at <a href="https://cuai.github.io/">CUAI</a>, I enjoy working on interesting graph ML problems! 
+
 
      <!-- Previously, I've worked as an undergraduate researcher at <a href="https://www.maizegenetics.net/">Buckler
       Lab</a>, working to write fast (and
@@ -63,6 +72,8 @@ layout: default
 
     I'm also a teaching assistant for <a
         href="https://www.cs.cornell.edu/courses/cs4820/2021sp/">Algorithms</a> at Cornell.
+
+        Resumes are too short, so read on below for more details :)
     </div>
   </div>
 
@@ -95,7 +106,37 @@ layout: default
         flex-flow: column;">
           <div class="media">
             <div class="columns media-content is-vcentered" style="justify-content: space-between; align-items: center;">
-              <span class="column is-vcentered exp-title">Facebook</span>
+              <span class="column is-vcentered exp-title">Meta AI</span>
+              <span class="tag column is-spaced is-vcentered is-medium is-link is-light" style="max-width: 15em;">
+                  Software Engineering Intern
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I worked on making vision transformers for videos faster, while maintaining accuracy. Videos make up a large
+              part of content consumed, so making ML models more efficient is very relevant to downstream tasks like video understanding in Instagram Reels.
+            </p>
+            <p>I implemented adaptive token sampling modules from research papers in PyTorch, and incorporated them within transformer blocks. I trained and evaluated the models on internal datasets, and integrated the changes into production workflows.</p>
+            <p>Led to a 25% decrease in video transformer latency and flops, and an overall 10% decrease in the final production model.</p>
+            <!-- <p>Worked in PyTorch, using the Lightning framework, and used SQL for data analysis.</p> -->
+          </div>
+          <div style="flex: 0 1 1em">
+            
+            <!-- <span class="language cpp" style="margin-left: 0;"></span>  -->
+           <span class="language python"></span> PyTorch Lightning
+              <span class="language sql" ></span> SQL
+            <span style="font-size: 11pt; font-weight: light; float:right">June 2022 - August 2022</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="columns media-content is-vcentered" style="justify-content: space-between; align-items: center;">
+              <span class="column is-vcentered exp-title">Instagram</span>
               <span class="tag column is-spaced is-vcentered is-medium is-link is-light" style="max-width: 15em;">
                   Software Engineering Intern
               </span>
@@ -190,6 +231,7 @@ layout: default
         I'm also exploring CS theory research, advised by Professor Robert Kleinberg.</div>
       
     </div>
+  
     <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
       <div class="card offset">
         <div class="card-content" style="height: 100%; display: flex;
@@ -217,7 +259,40 @@ layout: default
           </div>
 
           <div style="flex: 0 1 1em; margin-top: 20px;">
-            <span style="font-size: 11pt; font-weight: light; float:right">June 2021 - present</span></div>
+            <span style="font-size: 11pt; font-weight: light; float:right">March 2021 - present</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Online Learning Algorithms</span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>Worked with Professor Robert Kleinberg on online randomized algorithms for approximating cumulative distribution functions (CDFs) under adversarial conditions, using only comparison feedback.
+              A real-world example of this would be trying to estimate customers' willingness to pay for a good, by adjusting prices and observing their decisions.
+            </p>
+
+            <div class="is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered" ><b>[2] Non-Stochastic CDF Estimation Using Threshold Queries</b></span>
+              <!-- <span class="icon">
+                <a href="https://arxiv.org/pdf/2110.14446.pdf"><i class="fa intro fa-file-pdf-o fa-expand"
+                    aria-label="PDF"></i></a>
+              </span> -->
+              <span class="tag is-spaced is-6 is-vcentered is-dynamic-medium is-link is-light" >
+                  <i>in submission</i>
+              </span>
+            </div>
+          </div>
+
+          <div style="flex: 0 1 1em; margin-top: 20px;">
+            <span style="font-size: 11pt; font-weight: light; float:right">September 2021 - present</span></div>
         </div>
       </div>
 
