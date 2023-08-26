@@ -54,16 +54,19 @@ layout: default
     <div class="column is-vcentered is-8-desktop is-centered has-text-centered is-full">
       <div style="font-size: max(26pt, 2.2vw); font-weight: bold;"> what i do</div>
 
-      This summer, I'm interning at Meta AI, working on making vision transformers for videos more compute efficient.
-      At Cornell, I'm a backend developer at
-      <!-- <span class="icon abt">
-        <i class="fa fa-spotify"></i></span> -->
+      Most recently, I interned at {%- include databricks.html -%} Databricks, working on infra for Python notebooks.
+      In the past, I've had the pleasure of interning at Meta AI, where I worked on making vision transformers for videos more compute efficient.
 
+      <!-- At Cornell, I'm a backend developer at
+<span class="icon abt">
+        <i class="fa fa-spotify"></i></span> -->
+<!--
       {%- include dti.html -%}
       <a href="https://www.cornelldti.org/">
         Design & Tech Initiative</a>, working on
-      <a href="https://courseplan.io">CoursePlan</a>. Before that, I interned at Instagram, working on backend infra + ML for suggested user recommendations.<br>
-     As an undergraduate researcher at <a href="https://cuai.github.io/">CUAI</a>, I enjoy working on interesting graph ML problems! 
+      <a href="https://courseplan.io">CoursePlan</a>. -->
+      Even before that, I interned at Instagram, working on backend infra + ML for suggested user recommendations.<br>
+     As a researcher at <a href="https://cuai.github.io/">CUAI</a>, I enjoy working on interesting graph ML problems! 
 
 
      <!-- Previously, I've worked as an undergraduate researcher at <a href="https://www.maizegenetics.net/">Buckler
@@ -71,7 +74,7 @@ layout: default
     statically typed!) genetic analysis tools in Kotlin. -->
 
     I'm also a teaching assistant for <a
-        href="https://www.cs.cornell.edu/courses/cs4820/2021sp/">Algorithms</a> at Cornell.
+        href="https://www.cs.cornell.edu/courses/cs6850/2023fa/">Networks</a> at Cornell.
 
         Resumes are too short, so read on below for more details :)
     </div>
@@ -106,6 +109,36 @@ layout: default
         flex-flow: column;">
           <div class="media">
             <div class="columns media-content is-vcentered" style="justify-content: space-between; align-items: center;">
+              <span class="column is-vcentered exp-title">Databricks</span>
+              <span class="tag column is-spaced is-vcentered is-medium is-link is-light" style="max-width: 15em;">
+                  Software Engineering Intern
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I developed an interactive Python debugger for Databricks Notebooks. This involved low-level work using libraries like debugpy and ipykernel, as well as web dev work to design the frontend and handle the state machine logic of a debugger.
+            </p>
+            <p> Improved over comparable offerings like Jupyter Notebooks, by emphasizing features like concurrent user support and session reliability during long-running jobs. I also made open source contributions to ipykernel.</p>
+            <p>Got familiar with working with sharded deployments, and tools like Kubernetes and Bazel. I also got the opportunity to make design docs for key architectural decisions, and learnt to scope out large projects.</p>
+            <!-- <p>Worked in PyTorch, using the Lightning framework, and used SQL for data analysis.</p> -->
+          </div>
+          <div style="flex: 0 1 1em">
+            
+            <!-- <span class="language cpp" style="margin-left: 0;"></span>  -->
+           <span class="language python" style="margin-left: 0;"></span> Python
+              <span class="language java" ></span> Scala
+              <span class="language typescript" ></span> Typescript
+            <span style="font-size: 11pt; font-weight: light; float:right">May 2023 - August 2023</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop">
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="columns media-content is-vcentered" style="justify-content: space-between; align-items: center;">
               <span class="column is-vcentered exp-title">Meta AI</span>
               <span class="tag column is-spaced is-vcentered is-medium is-link is-light" style="max-width: 15em;">
                   Software Engineering Intern
@@ -123,7 +156,7 @@ layout: default
           <div style="flex: 0 1 1em">
             
             <!-- <span class="language cpp" style="margin-left: 0;"></span>  -->
-           <span class="language python"></span> PyTorch Lightning
+           <span class="language python" style="margin-left: 0;"></span> PyTorch Lightning
               <span class="language sql" ></span> SQL
             <span style="font-size: 11pt; font-weight: light; float:right">June 2022 - August 2022</span></div>
         </div>
@@ -161,34 +194,7 @@ layout: default
 
     </div>
 
-    <div class="column is-10-mobile is-8-tablet is-5-desktop is-centered has-text-left-desktop" >
-      <div class="card offset">
-        <div class="card-content" style="height: 100%; display: flex;
-        flex-flow: column;">
-          <div class="media">
-            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
-              <span class="is-vcentered exp-title" >Cornell DTI</span>
-              <span class="tag is-spaced is-6 is-vcentered is-medium is-link is-light">
-                  Backend Developer
-              </span>
-            </div>
-          </div>
-          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
-            <p>I work on <link rel = "icon" type="image/ico" href="courseplan.io/favicon.ico"> <a class = "is-light is-link" href = "courseplan.io">CoursePlan</a>, a website that helps Cornell students plan out their course requirements for graduation. 
-              This involves implementing infrastructure to check for different requirement fulfillment conditions through a bipartite matching 
-              algorithm. So far, we have over 3000 users!</p>
-            <p>
-              Previously a dev on <a href="https://www.cornelldti.org/projects/flux/">flux</a>, an app to assess real-time traffic flow at Cornell campus locations. Implemented a model to predict queue wait-times using swipe data, which improves through weighted crowdsourced feedback.
-            </p>
-
-          </div>
-          <div style="flex: 0 1 1em"><span class="language typescript" style="margin-left: 0;"></span> TypeScript
-            <span class="language sql"></span> Firebase
-            <span style="font-size: 11pt; font-weight: light; float:right">August 2020 - present</span></div>
-        </div>
-      </div>
-
-    </div>
+    
 
     <div class="column is-10-mobile is-8-tablet is-5-desktop is-vcentered is-centered has-text-left-desktop is-flex">
       <div class="card offset">
@@ -203,11 +209,29 @@ layout: default
             </div>
           </div>
           <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
-            <p>As a head TA for CS 4820 (Algorithms), I am responsible for holding recitations, setting up the autograder, writing course materials, and holding office hours.</p>
-            <p>
-              Previously, I have also been a TA for CS 2802 - Honors Discrete Math (Fall '20<b>*</b>) and CS 4820 (Spring '21<b>*</b>).
-            </p>
-            <p><b>*</b> Received the CIS department's course staff award </p>
+            <p> I've been responsible for holding recitations, setting up autograders, writing course materials, holding office hours, and leading grading sessions. I've also 
+              delivered some in-class lectures while substituting for the professor. I received the Alan Marx Memorial Prize for Excellence in Teaching ($500), given to 1 senior from the graduating CS class.
+
+              <p>
+              I've had the pleasure of TA-ing classes taught by some amazing professors! Here's a history:
+              <ul><li>CS 2802 (Honors Discrete Math): Fall '20</li>
+              <li>CS 4820 (Intro to Analysis of Algorithms): Spring '21, Summer '21, Fall '21, Fall '22
+              </li>
+            <li>
+              CS 4850 (Mathematical Foundations for the Information Age): Spring '22
+            </li>
+          <li>
+            CS 6850 (Theory of Information Networks): Spring '23, Fall '23
+          </li></ul></p>
+              
+              
+             
+              
+              <!-- As a head TA for CS 4820 (Algorithms), I am responsible for holding recitations, setting up the autograder, writing course materials, and holding office hours.</p> -->
+            <!-- <p> -->
+              <!-- Previously, I have also been a TA for CS 2802 - Honors Discrete Math (Fall '20<b>*</b>) and CS 4820 (Spring '21<b>*</b>). -->
+            <!-- </p> -->
+            <!-- <p><b>*</b> Received the CIS department's course staff award </p> -->
 
           </div>
           <div style="flex: 0 1 1em"><span class="language java" style="margin-left: 0;"></span> grading very long proofs
@@ -217,7 +241,34 @@ layout: default
       </div>
 
     </div>
+    <div class="column is-10-mobile is-8-tablet is-5-desktop is-centered has-text-left-desktop" >
+      <div class="card offset">
+        <div class="card-content" style="height: 100%; display: flex;
+        flex-flow: column;">
+          <div class="media">
+            <div class="media-content is-vcentered is-flex" style="justify-content: space-between; align-items: center;">
+              <span class="is-vcentered exp-title" >Cornell DTI</span>
+              <span class="tag is-spaced is-6 is-vcentered is-medium is-link is-light">
+                  Backend Developer
+              </span>
+            </div>
+          </div>
+          <div class="content" style="flex: 1 1 auto; margin-bottom: 0;">
+            <p>I worked on <link rel = "icon" type="image/ico" href="courseplan.io/favicon.ico"> <a class = "is-light is-link" href = "courseplan.io">CoursePlan</a>, a website that helps Cornell students plan out their course requirements for graduation. 
+              This involved implementing infrastructure to check for different requirement fulfillment conditions through a bipartite matching 
+              algorithm. So far, we have over 3000 users!</p>
+            <p>
+              Previously a dev on <a href="https://www.cornelldti.org/projects/flux/">flux</a>, an app to assess real-time traffic flow at Cornell campus locations. Implemented a model to predict queue wait-times using swipe data, which improves through weighted crowdsourced feedback.
+            </p>
 
+          </div>
+          <div style="flex: 0 1 1em"><span class="language typescript" style="margin-left: 0;"></span> TypeScript
+            <span class="language sql"></span> Firebase
+            <span style="font-size: 11pt; font-weight: light; float:right">August 2020 - May 2022</span></div>
+        </div>
+      </div>
+
+    </div>
 
 
 
